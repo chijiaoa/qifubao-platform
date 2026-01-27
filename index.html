@@ -1,0 +1,98 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>企服宝 - 企业服务一站式代办</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: '#137fec',
+                dark: '#0b63be',
+                light: '#e1effe',
+              },
+              slate: {
+                950: '#0a0f1a'
+              }
+            },
+            borderRadius: {
+              '4xl': '2rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+      
+      body {
+        margin: 0;
+        background-color: #f0f2f5;
+        font-family: 'Inter', 'PingFang SC', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        overflow: hidden;
+      }
+
+      .dark body {
+        background-color: #020617;
+      }
+
+      /* 模拟手机容器 */
+      #app-container {
+        width: 100%;
+        max-width: 430px;
+        height: 100vh;
+        max-height: 932px;
+        background: white;
+        position: relative;
+        overflow: hidden;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      }
+
+      @media (min-width: 640px) {
+        #app-container {
+          border: 8px solid #1e293b;
+          border-radius: 3rem;
+        }
+      }
+
+      .dark #app-container {
+        background: #0f172a;
+        border-color: #334155;
+      }
+
+      .hide-scrollbar::-webkit-scrollbar { display: none; }
+      .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+      .safe-area-bottom { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "recharts": "https://esm.sh/recharts@3.7.0",
+    "react/": "https://esm.sh/react@19.2.4/",
+    "react": "https://esm.sh/react@19.2.4",
+    "lucide-react": "https://esm.sh/lucide-react@0.563.0",
+    "@google/genai": "https://esm.sh/@google/genai@1.38.0",
+    "react-dom/": "https://esm.sh/react-dom@19.2.4/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="app-container">
+      <div id="root"></div>
+    </div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
